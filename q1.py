@@ -1,0 +1,24 @@
+sym = input("Enter the symbol/shape on card: ").lower()
+dragons = 0
+wizards = 0
+flag =  True
+while flag:
+    if  sym in "diamondclub":
+        dragons+=1
+    elif sym in "hearts" :
+        val = input("Is you card a number card ? : ")
+        if val in "YesYESyes":
+            wizards =+1
+        else:
+            dragons+=1
+    else:
+        wizards+=1
+    que = input("Do you want to continue playing ? : ")
+    if que in "NOnoNo":
+        break
+    else:
+        sym = input("Enter the symbol/shape on card: ").lower()
+if dragons>wizards:
+    print("The winner is team dragons!")
+else:
+    print("The winner is team wizards!")
